@@ -1,0 +1,63 @@
+extends layout
+
+block content
+  h2.app-title ci-media
+
+  include components/media
+  include components/media-product
+
+  div.ci-media
+    div.ci-media__image
+      img(src="http://via.placeholder.com/64x64" width="100%")
+    div.ci-media__content
+      h4.ci-media__title Bryan Cranston
+      p.ci-media__text  62 Episodes
+
+  div.ci-media
+    div.ci-media__image
+      img(src="http://via.placeholder.com/64x64" width="100%")
+    div.ci-media__content
+      p.ci-media__text Bryan Cranston played the role of Walter in Breaking Bad.
+
+  div.ci-media
+    div.ci-media__image
+      img(src="http://via.placeholder.com/48x48" width="100%")
+    div.ci-media__content
+      h4.ci-media__title Bryan Cranston
+      p.ci-media__text  62 Episodes
+    div.ci-media__extend
+      span.ci-media__text extend
+
+  div.ci-media
+      div.ci-media__content
+        h4.ci-media__title Bryan Cranston
+      div.ci-media__extend
+        span.ci-media__text something extend
+
+  div.ci-media.ci-media_image-right
+    div.ci-media__image
+      img(src="http://via.placeholder.com/64x64" width="100%")
+    div.ci-media__content
+      h4.ci-media__title Bryan Cranston
+      p.ci-media__text Bryan Cranston played the role of Walter in Breaking Bad.
+
+  div.ci-media.ci-media_image-right
+    div.ci-media__image
+      img(src="http://via.placeholder.com/48x48" width="100%")
+    div.ci-media__content
+      p.ci-media__text Bryan Cranston played the role of Walter in Breaking Bad.
+
+  div.ci-media.ci-media_image-top
+    div.ci-media__image
+      img(src="http://via.placeholder.com/480x320" width="100%")
+    div.ci-media__content
+      h4.ci-media__title Bryan Cranston
+      p.ci-media__text Bryan Cranston played the role of Walter in Breaking Bad. He is also known for playing Hal in Malcom in the Middle.
+    div.ci-media__extend
+      p.ci-media__text May 21st
+
+  div.ci-media.ci-media_image-top
+    div.ci-media__image
+      img(src="http://via.placeholder.com/480x320" width="100%")
+    div.ci-media__content
+      h4.ci-media__title Bryan Cranston

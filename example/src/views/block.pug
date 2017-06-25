@@ -1,0 +1,71 @@
+extends layout
+
+block content
+  h2.app-title ci-block
+
+  div.ci-block
+    div.ci-block__header
+      h3.ci-block__header-title Block Title
+    div.ci-block__body
+      include components/media_image-top
+    div.ci-block__footer.ci-text-right Comments / Views
+
+  div.ci-block
+    div.ci-block__body
+      include components/media-product
+    div.ci-block__footer.ci-text-right Add to Cart
+      
+  div.ci-block
+    div.ci-block__header
+      h3.ci-block__header-title Block Title
+    div.ci-block__body
+      include components/media
+    // div.ci-block__footer
+
+  div.ci-block.ci-block
+    div.ci-block__header
+      div.ci-media
+        div.ci-media__content
+          h4.ci-media__title Articles
+        div.ci-media__extend
+          span.ci-media__text more
+    div.ci-block__body
+      div.ci-list
+        ul.ci-list__body
+          - for (var i = 0; i < 3; i ++)
+            li.ci-list__cell
+              include components/media
+
+  div.ci-block.ci-block_border
+    div.ci-block__header
+      h3.ci-block__header-title Block Title
+    div.ci-block__body
+      include components/media_image-top
+    // div.ci-block__footer
+    
+  div.ci-block.ci-block_border-radius
+    div.ci-block__body
+      include components/media_image-top
+    div.ci-block__footer.ci-text-right Collection / Share
+
+  div.ci-block.ci-block_border.ci-block_shadow
+    div.ci-block__header
+      h3.ci-block__header-title Block Title
+    div.ci-block__body
+      include components/media
+    // div.ci-block__footer
+
+  div.ci-block.ci-block_border-radius.ci-block_shadow
+    div.ci-block__header
+      h3.ci-block__header-title Block Title
+    div.ci-block__body
+      div.ci-list
+        ul.ci-list__body
+          - for (var i = 0; i < 3; i ++)
+            li.ci-list__cell
+              div.ci-media
+                div.ci-media__content
+                  h4.ci-media__title Bryan Cranston
+                div.ci-media__extend
+                  span.ci-media__text something extend
+    div.ci-block__footer.ci-text-center Expand

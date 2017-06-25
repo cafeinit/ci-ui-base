@@ -1,0 +1,84 @@
+extends layout
+
+block content
+  h2.app-title ci-collection
+
+  div.ci-collection
+    div.ci-collection__header
+      h3.ci-collection__header-title Collection Title
+    
+    ul.ci-collection__body
+      - for (var i = 0; i < 6; i++)
+        li.ci-collection__cell
+          include components/media-product__image-top
+
+
+  div.ci-collection
+    div.ci-collection__header
+      div.ci-media
+        div.ci-media__content
+          h3.ci-media__title Products
+        div.ci-media__extend
+          a.ci-media__text more
+    
+    ul.ci-collection__body
+      - for (var i = 0; i < 6; i++)
+        li.ci-collection__cell
+          div.ci-block.ci-block_border
+            div.ci-block__body
+              include components/media-product__image-top
+            //- div.ci-block__footer.ci-text-right
+            //-   a Add to Cart
+            
+  div.ci-collection
+    div.ci-collection__header
+      div.ci-media
+        div.ci-media__content
+          h3.ci-media__title Products
+        div.ci-media__extend
+          a.ci-media__text more
+    
+    ul.ci-collection__body
+      - for (var i = 0; i < 6; i++)
+        li.ci-collection__cell
+          div.ci-block.ci-block_border.ci-block_shadow
+            div.ci-block__body
+              include components/media-product__image-top
+            //- div.ci-block__footer.ci-text-right
+            //-   a Add to Cart
+
+  div.ci-collection
+    div.ci-collection__header
+      div.ci-media
+        div.ci-media__content
+          h3.ci-media__title Products
+        div.ci-media__extend
+          a.ci-media__text more
+
+    ul.ci-collection__body
+      - for (var i = 0; i < 6; i++)
+        li.ci-collection__cell
+          div.ci-block.ci-block_border-radius
+            div.ci-block__body
+              include components/media-product__image-top
+            //- div.ci-block__footer.ci-text-right
+            //-   a Add to Cart
+                      
+  div.ci-collection
+    div.ci-collection__header
+      div.ci-media
+        div.ci-media__content
+          h3.ci-media__title Products
+        div.ci-media__extend
+          a.ci-media__text more
+
+    ul.ci-collection__body
+      - for (var i = 0; i < 6; i++)
+        li.ci-collection__cell
+          div.ci-block.ci-block_border-radius.ci-block_shadow
+            div.ci-block__body
+              include components/media-product__image-top
+            //- div.ci-block__footer.ci-text-right
+            //-   a Add to Cart
+
+  style .product { background: #fff; }
