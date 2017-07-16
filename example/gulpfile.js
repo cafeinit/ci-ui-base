@@ -1,7 +1,7 @@
 /**
  * @fileoverview gulpfile
  * @author burning (www.cafeinit.com)
- * @version 2017.06.22
+ * @version 2017.07.16
  */
 
 'use strict'
@@ -15,11 +15,11 @@ const pug = require('gulp-pug')
 const autoprefix = new LessAutoprefix({ browsers: ['last 5 versions'] })
 
 // tasks
-gulp.task('default', ['views', 'style', 'copy'])
+gulp.task('default', ['views', 'style'])
 
 gulp.task('views', () => {
   return gulp.src([
-    './src/views/*.pug'
+    './src/layout/*.pug'
   ])
     .pipe(pug({
       data: {
@@ -40,9 +40,3 @@ gulp.task('style', () => {
     .pipe(gulp.dest('./dist/style'))
 })
 
-gulp.task('copy', () => {
-  return gulp.src([
-    '../dist/*'
-  ])
-    .pipe(gulp.dest('./dist/style'))
-})
