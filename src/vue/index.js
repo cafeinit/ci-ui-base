@@ -4,9 +4,18 @@
  * @version 2017.07.16
  */
 
+import CIBlock from './CIBlock/CIBlock.vue'
+import CIBlockBody from './CIBlock/CIBlockBody.vue'
+import CIBlockFooter from './CIBlock/CIBlockFooter.vue'
+import CIBlockHeader from './CIBlock/CIBlockHeader.vue'
+
 import CIMedia from './CIMedia.vue'
 
 const CIUIBase = {
+  CIBlock,
+  CIBlockBody,
+  CIBlockFooter,
+  CIBlockHeader,
   CIMedia
 }
 

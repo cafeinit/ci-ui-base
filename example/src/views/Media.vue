@@ -7,13 +7,9 @@
       :image="{ src: 'http://via.placeholder.com/96x96' }")
 </template>
 
-<<script>
+<script>
 export default {
-  name: 'view-media',
-
-  created() {
-    console.log('Media View')
-  }
+  name: 'view-media'
 }
 </script>
 

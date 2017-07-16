@@ -15,6 +15,12 @@ const router = new VueRouter({
   mode: 'history',
   routes: [
     {
+      name: 'Block',
+      path: '/block',
+      component: resolve => require(['./views/Block.vue'], resolve)
+    },
+
+    {
       name: 'Media',
       path: '/media',
       component: resolve => require(['./views/Media.vue'], resolve)
