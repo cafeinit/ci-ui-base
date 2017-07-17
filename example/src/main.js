@@ -15,6 +15,18 @@ const router = new VueRouter({
   mode: 'history',
   routes: [
     {
+      name: 'Default',
+      path: '/',
+      component: resolve => require(['./views/Index.vue'], resolve)
+    },
+
+    {
+      name: 'Index',
+      path: '/index',
+      component: resolve => require(['./views/Index.vue'], resolve)
+    },
+
+    {
       name: 'Block',
       path: '/block',
       component: resolve => require(['./views/Block.vue'], resolve)

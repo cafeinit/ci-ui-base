@@ -1,6 +1,7 @@
 <template lang="pug">
   div.view-collection
-    h1 Collection
+    h2.app-title Collection
+
     ci-collection
       ci-collection-header(title="Collection Title" extend="more")
       ci-collection-body
@@ -9,7 +10,7 @@
             modifier="image-top"
             title="Bryan Cranston played the role of Walter in Breaking Bad"
             text="He is also known for playing."
-            image="http://via.placeholder.com/240x120")
+            image="http://via.placeholder.com/240x160")
 </template>
 
 <script>

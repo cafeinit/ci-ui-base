@@ -15,7 +15,7 @@ const pug = require('gulp-pug')
 const autoprefix = new LessAutoprefix({ browsers: ['last 5 versions'] })
 
 // tasks
-gulp.task('default', ['views', 'style'])
+gulp.task('default', ['views', 'style', 'copy'])
 
 gulp.task('views', () => {
   return gulp.src([
@@ -40,3 +40,10 @@ gulp.task('style', () => {
     .pipe(gulp.dest('./dist/style'))
 })
 
+gulp.task('copy', () => {
+  return gulp.src([
+    '../dist/*',
+    '../dist/*/*'
+  ])
+    .pipe(gulp.dest('./dist/ci-ui-base'))
+})

@@ -1,6 +1,7 @@
 <template lang="pug">
   div.view-block
-    h1 Block
+    h2.app-title Block
+
     ci-block
       ci-block-header(title="Block Title" extend="more")
       ci-block-body

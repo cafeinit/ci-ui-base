@@ -26,7 +26,7 @@ const banner = [
 ].join('\n')
 
 // tasks
-gulp.task('default', ['build'])
+gulp.task('default', ['build', 'copy:font'])
 
 gulp.task('build', () => {
   return gulp.src([
@@ -39,4 +39,11 @@ gulp.task('build', () => {
     .pipe(header(banner, { pkg: pkg }))
     .pipe(rename('ci-ui-base.css'))
     .pipe(gulp.dest('./dist'))
+})
+
+gulp.task('copy:font', () => {
+  return gulp.src([
+    './node_modules/material-design-icons/iconfont/MaterialIcons*'
+  ])
+    .pipe(gulp.dest('./dist/iconfont'))
 })

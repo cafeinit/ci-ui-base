@@ -922,6 +922,22 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     extend: {
       type: String,
       default: ''
+    },
+
+    accessory: {
+      type: String,
+      default: ''
+    }
+  },
+
+  computed: {
+    extend_content: function extend_content() {
+      var icon = '';
+      if (this.accessory) {
+        icon = '<i class="ci-icon material-icons">chevron_right</i>';
+      }
+      // return `<span>${this.extend}</span>` + icon
+      return this.extend + icon;
     }
   }
 });
@@ -985,6 +1001,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+
+/**
+ * @fileoverview CIMedia
+ * @author burning (www.cafeinit.com)
+ * @version 2017.07.16
+ */
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'ci-media',
@@ -1116,13 +1138,18 @@ if (false) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('li', {
-    staticClass: "ci-list__cell"
+    staticClass: "ci-list__cell",
+    on: {
+      "click": function($event) {
+        _vm.$emit('click')
+      }
+    }
   }, [(_vm.title) ? _c('ci-media', {
     attrs: {
       "image": _vm.image,
       "title": _vm.title,
       "text": _vm.text,
-      "extend": _vm.extend
+      "extend": _vm.extend_content
     }
   }) : _vm._e(), _vm._t("default")], 2)
 },staticRenderFns: []}
@@ -1195,8 +1222,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v(_vm._s(_vm.title))]) : _vm._e(), (_vm.text) ? _c('p', {
     staticClass: "ci-media__text"
   }, [_vm._v(_vm._s(_vm.text))]) : _vm._e()]), (_vm.extend) ? _c('div', {
-    staticClass: "ci-media__extend"
-  }, [_vm._v(_vm._s(_vm.extend))]) : _vm._e()])
+    staticClass: "ci-media__extend",
+    domProps: {
+      "innerHTML": _vm._s(_vm.extend)
+    }
+  }) : _vm._e()])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

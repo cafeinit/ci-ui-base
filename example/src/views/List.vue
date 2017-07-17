@@ -1,6 +1,7 @@
 <template lang="pug">
   div.view-list
-    h1 List
+    h2.app-title List
+
     ci-list
       ci-list-header(title="List Title" extend="more")
       ci-list-body
