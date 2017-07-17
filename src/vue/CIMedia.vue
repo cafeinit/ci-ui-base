@@ -1,7 +1,7 @@
 <template lang="pug">
-  div.ci-media
+  div.ci-media(:class="class_name")
     div.ci-media__image(v-if="image")
-      img(:src="image.src" width="100%")
+      img(:src="image" width="100%")
     div.ci-media__content
       h4.ci-media__title(v-if="title") {{title}}
       p.ci-media__text(v-if="text") {{text}}
@@ -13,11 +13,14 @@ export default {
   name: 'ci-media',
 
   props: {
+    modifier: {
+      type: String,
+      default: ''
+    },
+
     image: {
-      type: Object,
-      default() {
-        return null
-      }
+      type: String,
+      default: ''
     },
 
     title: {
@@ -33,6 +36,19 @@ export default {
     extend: {
       type: String,
       default: ''
+    }
+  },
+
+  computed: {
+    class_name() {
+      let name = ''
+      if (this.modifier) {
+        name = this.modifier.split(' ')
+        name = name.map((item) => {
+          return ('ci-media_' + item)
+        })
+      }
+      return name
     }
   }
 }

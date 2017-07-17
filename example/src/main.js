@@ -21,6 +21,12 @@ const router = new VueRouter({
     },
 
     {
+      name: 'List',
+      path: '/list',
+      component: resolve => require(['./views/List.vue'], resolve)
+    },
+
+    {
       name: 'Media',
       path: '/media',
       component: resolve => require(['./views/Media.vue'], resolve)

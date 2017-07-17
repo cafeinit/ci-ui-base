@@ -14,29 +14,22 @@ export default {
   name: 'ci-block',
 
   props: {
-    border: {
+    modifier: {
       type: String,
-      default: ''
-    },
-
-    radius: {
-      type: String,
-      default: ''
-    },
-
-    raised: {
-      type: String,
-      default: ''
+      default: ''   // border, radius, raised
     }
   },
 
   computed: {
     class_name() {
-      return {
-        'ci-block_border': this.border,
-        'ci-block_radius': this.radius,
-        'ci-block_raised': this.raised
+      let name = ''
+      if (this.modifier) {
+        name = this.modifier.split(' ')
+        name = name.map((item) => {
+          return ('ci-block_' + item)
+        })
       }
+      return name
     }
   }
 }

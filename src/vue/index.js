@@ -9,13 +9,27 @@ import CIBlockBody from './CIBlock/CIBlockBody.vue'
 import CIBlockFooter from './CIBlock/CIBlockFooter.vue'
 import CIBlockHeader from './CIBlock/CIBlockHeader.vue'
 
+import CIList from './CIList/CIList.vue'
+import CIListBody from './CIList/CIListBody.vue'
+import CIListCell from './CIList/CIListCell.vue'
+import CIListHeader from './CIList/CIListHeader.vue'
+
 import CIMedia from './CIMedia.vue'
+
+console.log('CIList', CIList)
+console.log('CIListBody', CIListBody)
 
 const CIUIBase = {
   CIBlock,
   CIBlockBody,
   CIBlockFooter,
   CIBlockHeader,
+
+  CIList,
+  CIListBody,
+  CIListCell,
+  CIListHeader,
+
   CIMedia
 }
 
