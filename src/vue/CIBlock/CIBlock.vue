@@ -22,7 +22,7 @@ export default {
 
   computed: {
     class_name() {
-      let name = ''
+      let name = []
       if (this.modifier) {
         name = this.modifier.split(' ')
         name = name.map((item) => {
