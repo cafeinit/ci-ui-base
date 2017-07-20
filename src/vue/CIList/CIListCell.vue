@@ -1,7 +1,7 @@
 <template lang="pug">
   li.ci-list__cell(@click="$emit('click')")
-    ci-media(v-if="title" :image="image"
-      :title="title" :text="text" :extend="extend_content")
+    ci-media(v-if="title" :image="image" :title="title" :text="text"
+      :extend_text="extend_text" :extend_icon="extend_icon")
     slot
 </template>
 
@@ -33,7 +33,12 @@ export default {
       default: ''
     },
 
-    extend: {
+    extend_text: {
+      type: String,
+      default: ''
+    },
+
+    extend_icon: {
       type: String,
       default: ''
     },

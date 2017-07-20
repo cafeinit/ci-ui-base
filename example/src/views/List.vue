@@ -7,11 +7,15 @@
       ci-list-body
         ci-list-cell(
           image="http://via.placeholder.com/48x48"
-          title="Item Title" text="Some text here" extend="detail")
+          title="Item Title" text="Some text here"
+            extend_text="detail" extend_icon="chevron_right")
 
-        ci-list-cell(title="Item Title" extend="detail")
+        ci-list-cell(
+          title="Bryan Cranston"
+          text="Bryan Cranston played the role of Walter in Breaking Bad. He is also known for playing."
+          extend_text="important" extend_icon="error_outline")
 
-        ci-list-cell(title="Item Title")
+        ci-list-cell(title="Item Title" extend_icon="ic_play_circle_outline")
 </template>
 
 <script>

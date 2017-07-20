@@ -918,7 +918,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       default: ''
     },
 
-    extend: {
+    extend_text: {
+      type: String,
+      default: ''
+    },
+
+    extend_icon: {
       type: String,
       default: ''
     },
@@ -1000,6 +1005,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /**
  * @fileoverview CIMedia
@@ -1031,7 +1038,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       default: ''
     },
 
-    extend: {
+    extend_text: {
+      type: String,
+      default: ''
+    },
+
+    extend_icon: {
       type: String,
       default: ''
     }
@@ -1148,7 +1160,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "image": _vm.image,
       "title": _vm.title,
       "text": _vm.text,
-      "extend": _vm.extend_content
+      "extend_text": _vm.extend_text,
+      "extend_icon": _vm.extend_icon
     }
   }) : _vm._e(), _vm._t("default")], 2)
 },staticRenderFns: []}
@@ -1220,12 +1233,13 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "ci-media__title"
   }, [_vm._v(_vm._s(_vm.title))]) : _vm._e(), (_vm.text) ? _c('p', {
     staticClass: "ci-media__text"
-  }, [_vm._v(_vm._s(_vm.text))]) : _vm._e()]), (_vm.extend) ? _c('div', {
-    staticClass: "ci-media__extend",
-    domProps: {
-      "innerHTML": _vm._s(_vm.extend)
-    }
-  }) : _vm._e()])
+  }, [_vm._v(_vm._s(_vm.text))]) : _vm._e()]), (_vm.extend_text || _vm.extend_icon) ? _c('div', {
+    staticClass: "ci-media__extend"
+  }, [(_vm.extend_text) ? _c('span', {
+    staticClass: "ci-media__text"
+  }, [_vm._v(_vm._s(_vm.extend_text))]) : _vm._e(), (_vm.extend_icon) ? _c('i', {
+    staticClass: "ci-media__icon material-icons"
+  }, [_vm._v(_vm._s(_vm.extend_icon))]) : _vm._e()]) : _vm._e()])
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

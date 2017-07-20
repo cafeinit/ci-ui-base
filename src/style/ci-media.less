@@ -1,7 +1,7 @@
 /**
  * @fileoverview ci-media
  * @author burning (www.cafeinit.com)
- * @version 2017.06.26
+ * @version 2017.07.20
  */
 
 .ci-media {
@@ -30,11 +30,13 @@
 }
 
 .ci-media__text {
-  margin: 4 * @REM 0;
+  margin: 0;
+  line-height: 20 * @REM;   // 保持与.ci-media__icon同高
 }
 
 .ci-media__extend {
-  min-width: 24 * @REM;   // 56 - 16 * 2
+  display: flex;
+  // min-width: 24 * @REM;   // 56 - 16 * 2
   max-width: 25%;
   margin-left: @MARGIN;
 
@@ -45,6 +47,15 @@
     text-overflow: ellipsis;
     font-size: @FONT_SIZE_SMALL;
     color: @COLOR_GRAY;
+  }
+
+  .ci-media__icon {
+    position: relative;
+    font-size: 20 * @REM;
+  }
+
+  .ci-media__text + .ci-media__icon {
+    margin-left: @MARGIN / 2;
   }
 }
 

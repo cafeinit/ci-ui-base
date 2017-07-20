@@ -5,7 +5,9 @@
     div.ci-media__content
       h4.ci-media__title(v-if="title") {{title}}
       p.ci-media__text(v-if="text") {{text}}
-    div.ci-media__extend(v-if="extend" v-html="extend")
+    div.ci-media__extend(v-if="extend_text || extend_icon")
+      span.ci-media__text(v-if="extend_text") {{extend_text}}
+      i.ci-media__icon.material-icons(v-if="extend_icon") {{extend_icon}}
 </template>
 
 <script>
@@ -39,7 +41,12 @@ export default {
       default: ''
     },
 
-    extend: {
+    extend_text: {
+      type: String,
+      default: ''
+    },
+
+    extend_icon: {
       type: String,
       default: ''
     }
