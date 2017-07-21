@@ -42,8 +42,8 @@ gulp.task('style', () => {
 
 gulp.task('copy', () => {
   return gulp.src([
-    '../dist/*',
-    '../dist/*/*'
+    '../dist/*.css',
+    '../dist/iconfont/*'
   ])
     .pipe(gulp.dest('./dist/ci-ui-base'))
 })

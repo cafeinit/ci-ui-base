@@ -1,7 +1,7 @@
 /**
  * @fileoverview webapck
  * @author burning (www.cafeinit.com)
- * @version 2017.07.16
+ * @version 2017.07.21
  */
 
 const path = require('path')
@@ -27,6 +27,12 @@ module.exports = {
           }
           // other vue-loader options go here
         }
+      },
+
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
       }
     ]
   },
@@ -34,8 +40,7 @@ module.exports = {
   resolve: {
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      // 'ci-ui-base': './src/ci-ui-base/ci-ui-base.amd.js'
-      'ci-ui-base': path.resolve(__dirname, '../dist/ci-ui-base.amd.js')
+      'ci-ui-base': path.resolve(__dirname, '../dist/ci-ui-base.js')
     }
   },
 
@@ -48,13 +53,19 @@ module.exports = {
   },
 
   plugins: [
-    // new webpack.optimize.UglifyJsPlugin({
-    //   compress: {
-    //     warnings: false
-    //   }
-    // }),
-    // new webpack.LoaderOptionsPlugin({
-    //   minimize: true
-    // })
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"production"'
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
+      compress: {
+        warnings: false
+      }
+    }),
+    new webpack.LoaderOptionsPlugin({
+      minimize: true
+    })
   ]
 }
