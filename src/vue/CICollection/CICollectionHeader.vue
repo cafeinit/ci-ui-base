@@ -11,14 +11,8 @@
  * @version 2017.07.16
  */
 
-import CIMedia from '../CIMedia.vue'
-
 export default {
   name: 'ci-collection-header',
-
-  components: {
-    'ci-media': CIMedia
-  },
 
   props: {
     title: {

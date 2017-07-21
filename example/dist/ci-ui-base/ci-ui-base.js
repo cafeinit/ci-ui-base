@@ -596,7 +596,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
   computed: {
     class_name: function class_name() {
-      var name = '';
+      var name = [];
       if (this.modifier) {
         name = this.modifier.split(' ');
         name = name.map(function (item) {
@@ -1052,7 +1052,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
   computed: {
     class_name: function class_name() {
-      var name = '';
+      var name = [];
       if (this.modifier) {
         name = this.modifier.split(' ');
         name = name.map(function (item) {

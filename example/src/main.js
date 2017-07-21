@@ -14,36 +14,36 @@ Vue.use(CIUIBase.plugin)
 const router = new VueRouter({
   mode: 'history',
   routes: [
-    {
-      name: 'Default',
-      path: '/',
-      component: resolve => require(['./views/Index.vue'], resolve)
-    },
+    // {
+    //   name: 'Default',
+    //   path: '/',
+    //   component: resolve => require(['./views/Index.vue'], resolve)
+    // },
+    //
+    // {
+    //   name: 'Index',
+    //   path: '/index',
+    //   component: resolve => require(['./views/Index.vue'], resolve)
+    // },
 
-    {
-      name: 'Index',
-      path: '/index',
-      component: resolve => require(['./views/Index.vue'], resolve)
-    },
-
-    {
-      name: 'Block',
-      path: '/block',
-      component: resolve => require(['./views/Block.vue'], resolve)
-    },
-
-    {
-      name: 'Collection',
-      path: '/collection',
-      component: resolve => require(['./views/Collection.vue'], resolve)
-    },
-
-    {
-      name: 'List',
-      path: '/list',
-      component: resolve => require(['./views/List.vue'], resolve)
-    },
-
+    // {
+    //   name: 'Block',
+    //   path: '/block',
+    //   component: resolve => require(['./views/Block.vue'], resolve)
+    // },
+    //
+    // {
+    //   name: 'Collection',
+    //   path: '/collection',
+    //   component: resolve => require(['./views/Collection.vue'], resolve)
+    // },
+    //
+    // {
+    //   name: 'List',
+    //   path: '/list',
+    //   component: resolve => require(['./views/List.vue'], resolve)
+    // },
+    
     {
       name: 'Media',
       path: '/media',

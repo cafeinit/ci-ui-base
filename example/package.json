@@ -33,6 +33,7 @@
     "gulp-less": "^3.3.0",
     "gulp-pug": "^3.3.0",
     "less-plugin-autoprefix": "^1.5.1",
+    "vue": "^2.2.1",
     "vue-loader": "^11.1.4",
     "vue-template-compiler": "^2.2.1",
     "webpack": "^2.2.0",

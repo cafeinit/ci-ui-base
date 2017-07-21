@@ -1,15 +1,21 @@
-<template lang="pug">
-  div.ci-media(:class="class_name")
-    div.ci-media__image(v-if="image")
-      img(:src="image" width="100%")
+<template lang="html">
+  <div class="ci-media" :class="class_name">
+    <div class="ci-media__image" v-if="image">
+      <img :src="image" width="100%" />
+    </div>
 
-    div.ci-media__content
-      h4.ci-media__title(v-if="title") {{title}}
-      p.ci-media__text(v-if="text") {{text}}
+    <div class="ci-media__content">
+      <h4 class="ci-media__title" v-if="title">{{title}}</h4>
+      <p class="ci-media__text" v-if="text">{{text}}</p>
+    </div>
 
-    div.ci-media__extend(v-if="extend_text || extend_icon")
-      span.ci-media__text(v-if="extend_text") {{extend_text}}
-      //- i.ci-media__icon.material-icons(v-if="extend_icon") {{extend_icon}}
+    <div class="ci-media__extend" v-if="extend_text || extend_icon">
+      <span class="ci-media__text" v-if="extend_text">{{extend_text}}</span>
+      <i class="ci-media__icon material-icons" v-if="extend_icon">
+        {{extend_icon}}
+      </i>
+    </div>
+  </div>
 </template>
 
 <script>
