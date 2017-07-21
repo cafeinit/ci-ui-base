@@ -9,7 +9,7 @@
 
     div.ci-media__extend(v-if="extend_text || extend_icon")
       span.ci-media__text(v-if="extend_text") {{extend_text}}
-      //- i.ci-media__icon.material-icons(v-if="extend_icon") {{extend_icon}}
+      i.ci-media__icon.material-icons(v-if="extend_icon") {{extend_icon}}
 </template>
 
 <script>
