@@ -1,9 +1,9 @@
-<template lang="pug">
+extend-text="<template lang="pug">
   div.view-block
     h2.app-title Block
 
     ci-block
-      ci-block-header(title="Block Title" extend="more")
+      ci-block-header(title="Block Title" extend-text="more")
       ci-block-body
         ci-media(
           modifier="image-top"
@@ -12,7 +12,7 @@
           image="http://via.placeholder.com/960x400")
 
     ci-block(modifier="border")
-      ci-block-header(title="Block Title" extend="more")
+      ci-block-header(title="Block Title" extend-text="more")
       ci-block-body
         ci-media(
           title="Bryan Cranston"
@@ -21,7 +21,7 @@
       ci-block-footer.ci-text-right Add to Cart
 
     ci-block(modifier="radius")
-      ci-block-header(title="Block Title" extend="more")
+      ci-block-header(title="Block Title" extend-text="more")
       ci-block-body
         ci-media(
           title="Bryan Cranston"
@@ -29,7 +29,7 @@
           image="http://via.placeholder.com/96x96")
 
     ci-block(modifier="radius raised")
-      ci-block-header(title="Block Title" extend="more")
+      ci-block-header(title="Block Title" extend-text="more")
       ci-block-body
         ci-media(
           title="Bryan Cranston"

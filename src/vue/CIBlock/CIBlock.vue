@@ -1,5 +1,5 @@
 <template lang="pug">
-  div.ci-block(:class="class_name")
+  div.ci-block(:class="className")
     slot
 </template>
 
@@ -21,7 +21,7 @@ export default {
   },
 
   computed: {
-    class_name() {
+    className() {
       let name = []
       if (this.modifier) {
         name = this.modifier.split(' ')

@@ -1,6 +1,10 @@
 <template lang="pug">
   div.ci-list__header
-    ci-media(v-if="title" :title="title" :extend="extend")
+    ci-media(v-if="title"
+      :title="title"
+      :extend-text="extendText"
+      :extend-icon="extendIcon"
+      :extend-icon-class-name="extendIconClassName")
     slot
 </template>
 
@@ -8,7 +12,7 @@
 /**
  * @fileoverview CIListHeader
  * @author burning (www.cafeinit.com)
- * @version 2017.07.16
+ * @version 2017.08.03
  */
 
 export default {
@@ -20,7 +24,17 @@ export default {
       default: ''
     },
 
-    extend: {
+    extendText: {
+      type: String,
+      default: ''
+    },
+
+    extendIcon: {
+      type: String,
+      default: ''
+    },
+
+    extendIconClassName: {
       type: String,
       default: ''
     }

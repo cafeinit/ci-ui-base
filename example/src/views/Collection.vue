@@ -3,7 +3,7 @@
     h2.app-title Collection
 
     ci-collection
-      ci-collection-header(title="Collection Title" extend="more")
+      ci-collection-header(title="Collection Title" extend-text="more")
       ci-collection-body
         ci-collection-cell(v-for="i in list" :key="i")
           ci-media.article(

@@ -1,6 +1,10 @@
 <template lang="pug">
   div.ci-block__header
-    ci-media(v-if="title" :title="title" :extend="extend")
+    ci-media(v-if="title"
+      :title="title"
+      :extend-text="extendText"
+      :extend-icon="extendIcon"
+      :extend-icon-class-name="extendIconClassName")
     slot
 </template>
 
@@ -20,7 +24,17 @@ export default {
       default: ''
     },
 
-    extend: {
+    extendText: {
+      type: String,
+      default: ''
+    },
+
+    extendIcon: {
+      type: String,
+      default: ''
+    },
+
+    extendIconClassName: {
       type: String,
       default: ''
     }

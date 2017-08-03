@@ -1,7 +1,7 @@
 /**
  * @fileoverview index
  * @author burning (www.cafeinit.com)
- * @version 2017.07.21
+ * @version 2017.08.03
  */
 
 import CIBlock from './CIBlock/CIBlock.vue'
@@ -42,7 +42,7 @@ const components = [
 
 const CIUIBase = {
   name: 'CIUIBase',
-  version: '1.1.0',
+  version: '1.2.0',
   plugin: plugin,
 
   CIBlock,
