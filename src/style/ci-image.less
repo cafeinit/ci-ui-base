@@ -1,0 +1,26 @@
+/**
+ * @fileoverview ci-image
+ * @author burning (www.cafeinit.com)
+ * @version 2017.08.03
+ */
+
+.ci-image {
+  background-color: @COLOR_WHITE;
+  position: relative;
+  display: block;
+  overflow: hidden;
+
+  img {
+    display: block;
+  }
+
+  img.ci-image-loading {
+    width: 100%;
+    height: 100%;
+    background-image: url("https://vuejs.org/images/logo.png");
+    background-color: @COLOR_GRAY;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100px;
+  }
+}
