@@ -15,7 +15,7 @@ const pug = require('gulp-pug')
 const autoprefix = new LessAutoprefix({ browsers: ['last 5 versions'] })
 
 // tasks
-gulp.task('default', ['views', 'style', 'copy'])
+gulp.task('default', ['views', 'style', 'copy', 'copy:iconfont'])
 
 gulp.task('views', () => {
   return gulp.src([
@@ -43,7 +43,13 @@ gulp.task('style', () => {
 gulp.task('copy', () => {
   return gulp.src([
     '../dist/*.css',
-    '../dist/iconfont/*'
   ])
     .pipe(gulp.dest('./dist/ci-ui-base'))
+})
+
+gulp.task('copy:iconfont', () => {
+  return gulp.src([
+    '../dist/iconfont/*'
+  ])
+    .pipe(gulp.dest('./dist/ci-ui-base/iconfont'))
 })
