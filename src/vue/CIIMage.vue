@@ -1,7 +1,7 @@
 <template lang="pug">
 div.ci-image(:style="viewStyle" @click="$emit('click')")
   img(v-if="status == STATUS.WILL_LOAD || status == STATUS.LOADING"
-      src="data:image/png;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7")
+    src="data:image/png;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7")
   img(v-if="status == STATUS.DID_LOAD" :src="src" :style="imageStyle")
 </template>
 
@@ -44,6 +44,11 @@ export default {
     radius: {
       type: [ Number, String ],
       default: 0
+    },
+
+    unit: {
+      type: Number,
+      default: 0.02
     },
 
     isLazy: {
@@ -98,21 +103,21 @@ export default {
       return {
         position: 'release',
         overflow: 'hidden',
-        width: this.myWidth + 'px',
-        height: this.myHeight + 'px',
+        width: this.myWidth * this.unit + 'rem',
+        height: this.myHeight * this.unit  + 'rem',
         'border-style': 'solid',
-        'border-width': this.border + 'px',
-        'border-radius': this.radius + 'px'
+        'border-width': this.border * this.unit + 'rem',
+        'border-radius': this.radius * this.unit + 'rem'
       }
     },
 
     imageStyle() {
       return {
-        'width': this.imageWidth + 'px',
-        'height': this.imageHeight + 'px',
-        'margin-left': this.imageLeft - this.border + 'px',
-        'margin-top': this.imageTop - this.border + 'px',
-        'border-radius': this.radius + 'px'
+        'width': this.imageWidth * this.unit + 'rem',
+        'height': this.imageHeight * this.unit + 'rem',
+        'margin-left': (this.imageLeft - this.border) * this.unit + 'rem',
+        'margin-top': (this.imageTop - this.border) * this.unit + 'rem',
+        'border-radius': this.radius * this.unit + 'rem'
       }
     }
   },
@@ -192,10 +197,6 @@ export default {
         this.imageWidth = parseInt(this.imageHeight * this.imageRatio)
         this.myWidth = parseInt(this.height * this.imageRatio)
       }
-    },
-
-    onClick(evt) {
-      this.$emit('click', evt)
     }
   }
 }

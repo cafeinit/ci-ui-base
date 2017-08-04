@@ -29,17 +29,20 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  padding: @PADDING * 0.5;
+  padding: @PADDING / 4;
   margin: 0;
 }
 
 .ci-collection__cell {
   flex: 1;
   flex-basis: 50%;
+  flex-grow: 0;
   list-style: none;
-  min-width: @MIN_WIDTH;
-  min-height: @MIN_HEIGHT;
-  padding: @PADDING * 0.5;
+  // min-width: @MIN_WIDTH;
+  // min-height: @MIN_HEIGHT;
+  min-width: 100% / 8;
+  max-width: 50%;
+  padding: @PADDING / 4;
   margin: 0;
 }
 
@@ -48,5 +51,17 @@
   .ci-block_radius,
   .ci-block_shadow {
     margin: 0;
+  }
+}
+
+@media (min-width: 640px) {
+  .ci-collection__cell {
+    flex-basis: 100% / 3;
+  }
+}
+
+@media (min-width: 960px) {
+  .ci-collection__cell {
+    flex-basis: 100% / 4;
   }
 }

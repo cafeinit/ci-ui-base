@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/iburning/ci-style-base#readme",
   "dependencies": {
+    "less-loader": "^4.0.5",
     "vue": "^2.4.1",
     "vue-router": "^2.7.0"
   },
