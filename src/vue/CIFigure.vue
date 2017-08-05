@@ -2,7 +2,6 @@
 figure.ci-figure(:style="viewStyle" @click="$emit('click')")
   img(:src="image" width="100%")
   strong(v-if="title") {{title}}
-  div {{viewStyle}}
 </template>
 
 <script>
