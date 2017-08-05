@@ -7,6 +7,8 @@
 const path = require('path')
 const webpack = require('webpack')
 
+let host = process.env.LOCALHOST || 'localhost'
+
 module.exports = {
   entry: {
     'main': './src/main.js'
@@ -48,7 +50,7 @@ module.exports = {
     historyApiFallback: true,
     noInfo: true,
     contentBase: './dist',
-    // host: config.host,
+    host: host,
     // port: config.port
   },
 
