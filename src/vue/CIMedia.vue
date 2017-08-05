@@ -1,7 +1,7 @@
 <template lang="pug">
 div.ci-media(:class="className" @click="$emit('click')")
   div.ci-media__image(v-if="image")
-    ci-image(:src="image" :mode="imageMode"
+    ci-figure(:image="image" :mode="imageMode"
       :width="imageWidth" :height="imageHeight"
       :border="imageBorder" :radius="imageRadius"
       :is-lazy="imageIsLazy"
@@ -49,12 +49,12 @@ export default {
 
     imageWidth: {
       type: [ Number, String ],
-      default: 96
+      default: '100%'
     },
 
     imageHeight: {
       type: [ Number, String ],
-      default: 96
+      default: '100%'
     },
 
     imageBorder: {

@@ -5,6 +5,7 @@
     ci-media(
       image="http://via.placeholder.com/96x96"
       title="Bryan Cranston"
+      image-width="96" image-height="96"
       text="Bryan Cranston played the role of Walter in Breaking Bad. He is also known for playing.")
 
 

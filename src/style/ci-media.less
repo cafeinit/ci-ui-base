@@ -1,18 +1,17 @@
 /**
  * @fileoverview ci-media
  * @author burning (www.cafeinit.com)
- * @version 2017.07.20
+ * @version 2017.08.05
  */
 
 .ci-media {
   display: flex;
-  // max-width: 480 * @REM;
-  // min-height: 48 * @REM;
   padding: @PADDING;
-  align-items: center;
+  align-items: center;  // flex-start | flex-end | center | baseline |
 }
 
 .ci-media__image {
+  position: relative;
   min-width: 40 * @REM;   // 72 - 16 * 2
   margin-right: @PADDING;
 

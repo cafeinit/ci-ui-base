@@ -14,6 +14,7 @@ import CICollectionBody from './CICollection/CICollectionBody.vue'
 import CICollectionCell from './CICollection/CICollectionCell.vue'
 import CICollectionHeader from './CICollection/CICollectionHeader.vue'
 
+import CIFigure from './CIFigure.vue'
 import CIImage from './CIImage.vue'
 
 import CIList from './CIList/CIList.vue'
@@ -34,6 +35,7 @@ const components = [
   CICollectionCell,
   CICollectionHeader,
 
+  CIFigure,
   CIImage,
 
   CIList,

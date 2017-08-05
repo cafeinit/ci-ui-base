@@ -11,8 +11,7 @@
             title="Bryan Cranston played the role of Walter in Breaking Bad"
             text="He is also known for playing."
             image="http://via.placeholder.com/240x160"
-            image-mode="auto-height"
-            :image-width="image_width")
+            image-height="66.666667%")
 </template>
 
 <script>

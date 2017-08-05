@@ -10,8 +10,7 @@ extend-text="<template lang="pug">
           title="Bryan Cranston"
           text="Bryan Cranston played the role of Walter in Breaking Bad. He is also known for playing."
           image="http://via.placeholder.com/960x400"
-          image-mode="auto-height"
-          :image-width="page_width")
+          image-height="50%")
 
     ci-block(modifier="radius")
       ci-block-body
@@ -22,8 +21,7 @@ extend-text="<template lang="pug">
             He is also known for playing.\
             Bryan Cranston played the role of..."
           image="http://via.placeholder.com/960x400"
-          image-mode="auto-height"
-          :image-width="page_width - 16 * 2"
+          image-height="50%"
           extend-text="Read More")
 
 
@@ -42,6 +40,7 @@ extend-text="<template lang="pug">
         ci-media(
           title="Bryan Cranston"
           text="Bryan Cranston played the role of Walter in Breaking Bad. He is also known for playing."
+          image-width="96" image-height="96"
           image="http://via.placeholder.com/96x96")
 
     ci-block(modifier="radius raised")
@@ -50,6 +49,7 @@ extend-text="<template lang="pug">
         ci-media(
           title="Bryan Cranston"
           text="Bryan Cranston played the role of Walter in Breaking Bad. He is also known for playing."
+          image-width="128" image-height="150%"
           image="http://via.placeholder.com/96x96")
 </template>
 

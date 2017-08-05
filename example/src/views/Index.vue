@@ -13,6 +13,8 @@ div.view-index
 
   ci-list
     ci-list-body
+      ci-list-cell(title="Figure" extend-icon="chevron_right"
+        @click="toUrl('figure')")
       ci-list-cell(title="Image" extend-icon="chevron_right"
         @click="toUrl('image')")
       ci-list-cell(title="Media" extend-icon="chevron_right"
