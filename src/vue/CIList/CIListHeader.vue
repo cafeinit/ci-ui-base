@@ -1,5 +1,5 @@
 <template lang="pug">
-  div.ci-list__header
+  div.ci-list__header(@click="$emit('click')")
     ci-media(v-if="title"
       :title="title"
       :extend-text="extendText"

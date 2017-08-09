@@ -1,9 +1,11 @@
 <template lang="pug">
-  div.ci-block__header
+  div.ci-block__header(@click="$emit('click')")
     ci-media(v-if="title"
       :title="title"
-      :extend-text="extendText"
-      :extend-icon="extendIcon"
+      :image="image" :image-mode="imageMode"
+      :image-width="imageWidth" :image-height="imageHeight"
+      :image-border="imageBorder" :image-radius="imageRadius"
+      :extend-text="extendText" :extend-icon="extendIcon"
       :extend-icon-class-name="extendIconClassName")
     slot
 </template>
@@ -12,7 +14,7 @@
 /**
  * @fileoverview CIBlockHeader
  * @author burning (www.cafeinit.com)
- * @version 2017.07.16
+ * @version 2017.08.08
  */
 
 export default {

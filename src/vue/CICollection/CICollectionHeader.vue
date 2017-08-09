@@ -1,5 +1,5 @@
 <template lang="pug">
-  div.ci-collection__header
+  div.ci-collection__header(@click="$emit('click')")
     ci-media(v-if="title"
       :title="title"
       :extend-text="extendText"
@@ -12,7 +12,7 @@
 /**
  * @fileoverview CICollectionHeader
  * @author burning (www.cafeinit.com)
- * @version 2017.08.03
+ * @version 2017.08.09
  */
 
 export default {

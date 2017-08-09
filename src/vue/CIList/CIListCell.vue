@@ -1,11 +1,15 @@
 <template lang="pug">
   li.ci-list__cell(@click="$emit('click')")
-    ci-media(v-if="title" :title="title" :text="text"
+    ci-media(v-if="title"
+      :title="title" :text="text"
       :image="image" :image-mode="imageMode"
       :image-width="imageWidth" :image-height="imageHeight"
       :image-border="imageBorder" :image-radius="imageRadius"
       :image-is-lazy="imageIsLazy"
-      :extend-text="extendText" :extend-icon="extendIcon")
+      :extend-text="extendText" :extend-icon="extendIcon"
+      :extend-icon-class-name="extendIconClassName"
+      @click-image="$emit('click-image')"
+      @click-extend="$emit('click-extend')")
     slot
 </template>
 
@@ -13,7 +17,7 @@
 /**
  * @fileoverview CIListCell
  * @author burning (www.cafeinit.com)
- * @version 2017.07.16
+ * @version 2017.08.09
  */
 
 export default {
@@ -75,20 +79,9 @@ export default {
       default: ''
     },
 
-    accessory: {
+    extendIconClassName: {
       type: String,
       default: ''
-    }
-  },
-
-  computed: {
-    extend_content() {
-      let icon = ''
-      if (this.accessory) {
-        icon = `<i class="ci-icon material-icons">chevron_right</i>`
-      }
-      // return `<span>${this.extend}</span>` + icon
-      return this.extend + icon
     }
   }
 }
