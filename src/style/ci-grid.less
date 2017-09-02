@@ -1,0 +1,64 @@
+/**
+ * @fileoverview ci-grid
+ * @author burning (www.cafeinit.com)
+ * @version 2017.09.02
+ */
+
+.ci-grid {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 auto;
+  align-items: stretch;
+}
+
+.ci-grid_no-spacing {
+  padding: 0;
+
+  > .ci-grid-cell {
+    padding: 0;
+  }
+}
+
+.ci-grid-cell {
+  flex: 1;
+}
+
+
+.ci-grid-cells(@size, @i) when (@i > 0) {
+  .ci-grid-cells(@size, @i - 1);    // next iteration
+
+  // code for each iteration
+  .ci-grid-cell_@{size}-@{i} {
+    flex: @i;
+    flex-basis: @i / 12 * 100%;
+  }
+}
+
+// @media screen and (min-width: 640px) {
+@media screen {
+  .ci-grid-cells(sm, 12); // launch the loop
+}
+
+@media screen and (min-width: 960px) {
+  .ci-grid-cells(md, 12); // launch the loop
+
+  .ci-grid-cell {
+    padding: 0 @PADDING / 2;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .ci-grid-cells(bg, 12); // launch the loop
+
+  // .ci-grid-cell {
+  //   padding: 0 @PADDING / 2;
+  // }
+}
+
+@media screen and (min-width: 1440px) {
+  .ci-grid-cells(lg, 12); // launch the loop
+
+  // .ci-grid-cell {
+  //   padding: 0 @PADDING / 2;
+  // }
+}

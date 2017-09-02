@@ -15,6 +15,8 @@ import CICollectionCell from './CICollection/CICollectionCell.vue'
 import CICollectionHeader from './CICollection/CICollectionHeader.vue'
 
 import CIFigure from './CIFigure.vue'
+import CIGrid from './CIGrid/CIGrid.vue'
+import CIGridCell from './CIGrid/CIGridCell.vue'
 import CIImage from './CIImage.vue'
 
 import CIList from './CIList/CIList.vue'
@@ -36,6 +38,8 @@ const components = [
   CICollectionHeader,
 
   CIFigure,
+  CIGrid,
+  CIGridCell,
   CIImage,
 
   CIList,
@@ -48,7 +52,7 @@ const components = [
 
 const CIUIBase = {
   name: 'CIUIBase',
-  version: '1.2.0',
+  version: '1.3.0',
   plugin: plugin,
 
   CIBlock,
@@ -61,6 +65,9 @@ const CIUIBase = {
   CICollectionCell,
   CICollectionHeader,
 
+  CIFigure,
+  CIGrid,
+  CIGridCell,
   CIImage,
 
   CIList,

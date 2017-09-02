@@ -45,6 +45,12 @@ const router = new VueRouter({
     },
 
     {
+      name: 'Grid',
+      path: '/grid',
+      component: resolve => require(['./views/Grid.vue'], resolve)
+    },
+
+    {
       name: 'Image',
       path: '/image',
       component: resolve => require(['./views/Image.vue'], resolve)

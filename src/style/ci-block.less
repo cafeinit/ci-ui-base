@@ -6,21 +6,30 @@
 
 .ci-block {
   background-color: @COLOR_WHITE;
-  margin-bottom: @MARGIN * 2;
+  margin-bottom: @MARGIN;
   overflow: hidden;
 }
 
 .ci-block_border {
-  margin-left: @MARGIN;
-  margin-right: @MARGIN;
+  // margin-left: @MARGIN / 2;
+  // margin-right: @MARGIN / 2;
   border: 1px solid @BORDER_COLOR;
 }
 
 .ci-block_radius {
-  margin-left: @MARGIN;
-  margin-right: @MARGIN;
+  // margin-left: @MARGIN / 2;
+  // margin-right: @MARGIN / 2;
   border-radius: @RADIUS;
 }
+
+@media screen and (max-width: 960px) {
+  .ci-block_border,
+  .ci-block_radius {
+    margin-left: @MARGIN / 2;
+    margin-right: @MARGIN / 2;
+  }
+}
+
 
 .ci-block_raised {
   .ci-raised()

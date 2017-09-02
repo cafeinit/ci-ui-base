@@ -8,6 +8,8 @@ div.view-index
         @click="toUrl('block')")
       ci-list-cell(title="Collection" extend-icon="chevron_right"
         @click="toUrl('collection')")
+      ci-list-cell(title="Grid" extend-icon="chevron_right"
+        @click="toUrl('grid')")
       ci-list-cell(title="List" extend-icon="chevron_right"
         @click="toUrl('list')")
 
