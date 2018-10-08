@@ -1,6 +1,6 @@
 {
   "name": "ci-ui-base",
-  "version": "1.3.3",
+  "version": "1.3.4",
   "description": "CafeInit UI base",
   "main": "./dist/ci-ui-base.js",
   "scripts": {
