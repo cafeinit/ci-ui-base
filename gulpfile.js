@@ -35,7 +35,7 @@ gulp.task('build', () => {
     .pipe(less({
       plugins: [ autoprefix ]
     }))
-    // .pipe(cleanCSS({ compatibility: 'ie8' }))
+    .pipe(cleanCSS({ compatibility: 'ie8' }))
     .pipe(header(banner, { pkg: pkg }))
     .pipe(rename('ci-ui-base.css'))
     .pipe(gulp.dest('./dist'))

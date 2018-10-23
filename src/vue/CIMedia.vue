@@ -1,15 +1,14 @@
 <template lang="pug">
 div.ci-media(:class="className" @click="$emit('click')")
-  div.ci-media__image(v-if="image")
+  div.ci-media__image(v-if="image" @click="$emit('click-image')")
     ci-figure(:image="image" :mode="imageMode"
       :width="imageWidth" :height="imageHeight"
       :border="imageBorder" :radius="imageRadius"
-      :is-lazy="imageIsLazy"
-      @click="$emit('click-image')")
+      :is-lazy="imageIsLazy")
     slot(name="image")
 
   div.ci-media__content
-    h4.ci-media__title(v-if="title") {{title}}
+    h4.ci-media__title(v-if="title" @click="$emit('click-title')") {{title}}
     p.ci-media__text(v-if="text") {{text}}
     slot
 
@@ -25,7 +24,7 @@ div.ci-media(:class="className" @click="$emit('click')")
 /**
  * @fileoverview CIMedia
  * @author burning (www.cafeinit.com)
- * @version 2017.08.03
+ * @version 2018.10.24
  */
 
 export default {

@@ -1,7 +1,7 @@
 /**
  * @fileoverview index
  * @author burning (www.cafeinit.com)
- * @version 2017.08.03
+ * @version 2018.10.08
  */
 
 import CIBlock from './CIBlock/CIBlock.vue'
@@ -78,11 +78,11 @@ const CIUIBase = {
   CIMedia
 }
 
-if (window.Vue) {
-  Vue.use(plugin)
-}
+// if (window.Vue) {
+//   Vue.use(plugin)
+// }
 
-window.CIUIBase = CIUIBase
+// window.CIUIBase = CIUIBase
 
 export default CIUIBase
 
