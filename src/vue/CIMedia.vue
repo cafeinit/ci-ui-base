@@ -8,8 +8,8 @@ div.ci-media(:class="className" @click="$emit('click')")
     slot(name="image")
 
   div.ci-media__content
-    h4.ci-media__title(v-if="title" @click="$emit('click-title')") {{title}}
-    p.ci-media__text(v-if="text") {{text}}
+    h4.ci-media__title(v-if="title" @click="$emit('click-title')" v-html="title")
+    p.ci-media__text(v-if="text" v-html="text")
     slot
 
   div.ci-media__extend(v-if="extendText || extendIcon || $slots.extend"
@@ -24,7 +24,7 @@ div.ci-media(:class="className" @click="$emit('click')")
 /**
  * @fileoverview CIMedia
  * @author burning (www.cafeinit.com)
- * @version 2018.10.24
+ * @version 2018.11.12
  */
 
 export default {
